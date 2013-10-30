@@ -22,6 +22,7 @@
  *	requirements:
  *		UsingFW.js and Bootstrapper.js must be added in main html page.
  *
+ *	test with monkeyboy/monkeylegs
  **/
 
 
