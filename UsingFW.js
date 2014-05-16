@@ -113,7 +113,7 @@ UsingFW.prototype.getClassContainersAsList = function() {
 	var classContainersList = [];
 	for (var key in classContainers) {
 		if (classContainers.hasOwnProperty(key) && key !== this.BOOTSTRAPPER) {
-			classContainer = classContainers[key];
+			var classContainer = classContainers[key];
 			classContainersList.push(classContainer);
 		}
 	}
@@ -219,7 +219,7 @@ UsingFW.prototype.addClassesToQeue = function(classContainer) {
 
 	var classPaths = classContainer.classPaths;
 	var className = classContainer.className;
-	len = classPaths.length;
+	var len = classPaths.length;
 
 	for (var j = 0; j < len; j++) {
 		var classPath = UsingFW.detectShim(classPaths[j]);
@@ -322,5 +322,6 @@ window.using = function() {
 	}
 };
 
+window.define = window.using;
 //getting shit done
 window.UsingFW = new UsingFW();
